@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorful Soldier Registration Form</title>
+
+<style>
+    /* ---- GLOBAL STYLING ---- */
+    body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #3b3b98, #4caf50, #ff8c00, #e84393);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+        margin: 0;
+        padding: 0;
+    }
+
+    @keyframes gradientBG {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+        font-size: 35px;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    form {
+        background: rgba(255, 255, 255, 0.9);
+        width: 80%;
+        max-width: 750px;
+        margin: 25px auto;
+        padding: 25px;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+        animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    .form-section {
+        border-left: 5px solid #6c5ce7;
+        padding-left: 15px;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #dfe6e9, #ffffff);
+        padding: 20px;
+        border-radius: 12px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .form-section:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+
+    h3 {
+        color: #2d3436;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #6c5ce7;
+        padding-bottom: 5px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #2d3436;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 2px solid #b2bec3;
+        transition: 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #6c5ce7;
+        box-shadow: 0px 0px 8px rgba(108,92,231,0.6);
+        outline: none;
+    }
+
+    button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #e84393, #6c5ce7);
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 10px;
+        transition: 0.3s;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, #6c5ce7, #e84393);
+        transform: scale(1.08);
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+</style>
+</head>
+<body>
+
+<h2>🎖 Soldier Registration Form</h2>
+
+<form>
+
+    <!-- Personal Info -->
+    <div class="form-section">
+        <h3>📌 Personal Information</h3>
+        
+        <label>Full Name:</label>
+        <input type="text" required>
+
+        <label>Date of Birth:</label>
+        <input type="password" required>
+
+        <label>Gender:</label>
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+            <option>nonbinary</option>
+            <option value=>prefer_ not to say </option>
+            <option value=""> others</option>
+        </select>
+
+        <label>Email:</label>
+        <input type="email">
+
+        <label>Phone Number:</label>
+        <input type="tel" placeholder="+123456789">
+
+        <label>Upload Photo:</label>
+        <input type="file" accept="image/*">
+    </div>
+
+    <!-- Military Info -->
+    <div class="form-section">
+        <h3>🪖 Military Information</h3>
+
+        <label>Rank:</label>
+        <input type="text">
+
+        <label>Service Branch:</label>
+        <select>
+            <option>Army</option>
+            <option>Navy</option>
+            <option>Air Force</option>
+            <option>Marines</option>
+            <option>Special Forces</option>
+        </select>
+
+        <label>Years of Service:</label>
+        <input type="number" min="0" max="50">
+
+        <label>Active Duty:</label><br>
+        <input type="radio" name="duty"> Yes  
+        <input type="radio" name="duty"> No  
+        <br><br>
+
+        <label>Skills / Specialization:</label>
+        <textarea rows="4"></textarea>
+    </div>
+
+    <!-- Deployment -->
+    <div class="form-section">
+        <h3>📍 Deployment Preferences</h3>
+
+        <label>Preferred Locations:</label><br>
+        <input type="checkbox"> North <br>
+        <input type="checkbox"> South <br>
+        <input type="checkbox"> East <br>
+        <input type="checkbox"> West <br><br>
+
+        <label>Available From:</label>
+        <input type="datetime-local">
+
+        <label>Uniform Color Preference:</label>
+        <input type="color" value="#6c5ce7">
+    </div>
+
+    <!-- Additional -->
+    <div class="form-section">
+        <h3>✨ Additional Information</h3>
+
+        <label>Profile Link:</label>
+        <input type="url">
+
+        <label>Password:</label>
+        <input type="password">
+
+        <label>Fitness Level (1-10):</label>
+        <input type="range" min="1" max="10">
+
+        <input type="hidden" value="SRF-2025">
+    </div>
+
+    <div style="text-align:center;">
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </div>
+
+</form>
+
+</body>
+</html>
